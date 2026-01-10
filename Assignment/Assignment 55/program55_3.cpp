@@ -9,22 +9,23 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////
 //
 //  Function Name:   Addition                                                      
-//  Description:    It is used to add numbers
+//  Description:    It is used to divide numbers
 //  Input:          Two numbers(Generic)
-//  Output:         Addition of two numbers
+//  Output:         Division of two numbers
 //  Author:         Shravani Kishor Darandale
-//  Date:           09/01/2026
+//  Date:           10/01/2026
 //
 ////////////////////////////////////////////////////////////////////////
 
 
 template<class T>
-T  Addition(T no1 , T no2)
+T  Division(T no1 , T no2)
 {
-  T sum = 0;
+  T divide  = 0;
 
-  sum = no1 + no2;
-  return sum;
+  divide = no1 / no2;
+
+  return divide;
 
 }
 ////////////////////////////////////////////////////////////////////////
@@ -35,11 +36,11 @@ T  Addition(T no1 , T no2)
 
 int main()
 {
-   int iRet = Addition(10,20);
-   cout<<"Addition of integer is :"<<iRet<<endl;
+   int iRet = Division(20,10);
+   cout<<"Division of integer is :"<<iRet<<endl;
 
-   float fRet = Addition(10.5f,20.3f);
-   cout<<"Addition of float is :"<<fRet<<endl;
+   float fRet = Division(20.3f,10.5f);
+   cout<<"Division of float is :"<<fRet<<endl;
 
     return 0;
 }
@@ -48,10 +49,10 @@ int main()
 //
 //Test cases successfully handled by application
 //
-//  Input : 10 20
-// Output: Addition of integer is : 30
+//  Input : 20  10
+// Output: Division of integer is : 2
 //
-// Input : 10.5 20.3
-// Output: Addition of float is : 30.8
+// Input : 20.3  10.5 
+// Output: Division of float is : 1.93333
 //  
 ////////////////////////////////////////////////////////////////////////

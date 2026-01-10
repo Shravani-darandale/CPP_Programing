@@ -8,24 +8,31 @@ using namespace std;
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name:   Addition                                                      
-//  Description:    It is used to add numbers
-//  Input:          Two numbers(Generic)
-//  Output:         Addition of two numbers
+//  Function Name:  Maximum                                                      
+//  Description:    Finds maximum among four generic values
+//  Input:          Four generic values
+//  Output:         Maximum values
 //  Author:         Shravani Kishor Darandale
-//  Date:           09/01/2026
+//  Date:           10/01/2026
 //
 ////////////////////////////////////////////////////////////////////////
 
 
 template<class T>
-T  Addition(T no1 , T no2)
+T  Maximum(T a , T b , T c, T d)
 {
-  T sum = 0;
+  T max = a;
 
-  sum = no1 + no2;
-  return sum;
+  if(b > max)
+    max = b;
 
+  if(c > max)
+    max = c;
+
+  if(d > max)
+    max = d;
+  
+    return max;
 }
 ////////////////////////////////////////////////////////////////////////
 //
@@ -35,23 +42,23 @@ T  Addition(T no1 , T no2)
 
 int main()
 {
-   int iRet = Addition(10,20);
-   cout<<"Addition of integer is :"<<iRet<<endl;
+   int iRet = Maximum(10, 20, 15, 5);
+    cout << "Maximum (int) : " << iRet << endl;
 
-   float fRet = Addition(10.5f,20.3f);
-   cout<<"Addition of float is :"<<fRet<<endl;
+    float fRet = Maximum(3.5f, 7.8f, 2.1f, 6.4f);
+    cout << "Maximum (float) : " << fRet << endl;
 
-    return 0;
+  return 0;
 }
 
 ////////////////////////////////////////////////////////////////////////
 //
 //Test cases successfully handled by application
 //
-//  Input : 10 20
-// Output: Addition of integer is : 30
+// Input : 20  10  15  5
+// Output: 20
 //
-// Input : 10.5 20.3
-// Output: Addition of float is : 30.8
+// Input : 3.5  7.8  2.1  6.4
+// Output: 7.8  
 //  
 ////////////////////////////////////////////////////////////////////////

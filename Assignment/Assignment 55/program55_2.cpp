@@ -9,9 +9,9 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////
 //
 //  Function Name:   Addition                                                      
-//  Description:    It is used to add numbers
+//  Description:    It is used to subract numbers
 //  Input:          Two numbers(Generic)
-//  Output:         Addition of two numbers
+//  Output:         Substraction of two numbers
 //  Author:         Shravani Kishor Darandale
 //  Date:           09/01/2026
 //
@@ -19,12 +19,12 @@ using namespace std;
 
 
 template<class T>
-T  Addition(T no1 , T no2)
+T  Substraction(T no1 , T no2)
 {
-  T sum = 0;
+  T subract  = 0;
 
-  sum = no1 + no2;
-  return sum;
+  subract = no1 - no2;
+  return subract;
 
 }
 ////////////////////////////////////////////////////////////////////////
@@ -35,11 +35,11 @@ T  Addition(T no1 , T no2)
 
 int main()
 {
-   int iRet = Addition(10,20);
-   cout<<"Addition of integer is :"<<iRet<<endl;
+   int iRet = Substraction(20,10);
+   cout<<"Substraction of integer is :"<<iRet<<endl;
 
-   float fRet = Addition(10.5f,20.3f);
-   cout<<"Addition of float is :"<<fRet<<endl;
+   float fRet = Substraction(20.3f,10.5f);
+   cout<<"Substraction of float is :"<<fRet<<endl;
 
     return 0;
 }
@@ -48,10 +48,10 @@ int main()
 //
 //Test cases successfully handled by application
 //
-//  Input : 10 20
-// Output: Addition of integer is : 30
+//  Input : 20  10
+// Output: Substraction of integer is : 10
 //
-// Input : 10.5 20.3
-// Output: Addition of float is : 30.8
+// Input : 20.3  10.5 
+// Output: Substraction of float is : 9.8
 //  
 ////////////////////////////////////////////////////////////////////////

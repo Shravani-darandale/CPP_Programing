@@ -9,23 +9,22 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////
 //
 //  Function Name:   Addition                                                      
-//  Description:    It is used to add numbers
-//  Input:          Two numbers(Generic)
-//  Output:         Addition of two numbers
+//  Description:    It is used to swap templates
+//  Input:          Two generic variable
+//  Output:         Swapped values
 //  Author:         Shravani Kishor Darandale
-//  Date:           09/01/2026
+//  Date:           10/01/2026
 //
 ////////////////////////////////////////////////////////////////////////
 
 
 template<class T>
-T  Addition(T no1 , T no2)
+T  Swap(T &no1 , T &no2)
 {
-  T sum = 0;
-
-  sum = no1 + no2;
-  return sum;
-
+  T temp;
+  temp = no1;
+  no1 = no2;
+  no2 = temp;
 }
 ////////////////////////////////////////////////////////////////////////
 //
@@ -35,23 +34,24 @@ T  Addition(T no1 , T no2)
 
 int main()
 {
-   int iRet = Addition(10,20);
-   cout<<"Addition of integer is :"<<iRet<<endl;
+  int a = 10 ,b = 20;
+  swap(a,b);
+  cout<<"After swap of integer :"<<a<<" "<<b<<" "<<endl;
 
-   float fRet = Addition(10.5f,20.3f);
-   cout<<"Addition of float is :"<<fRet<<endl;
-
-    return 0;
+  float x = 3.5f ,y = 7.8f;
+  swap(x,y);
+  cout<<"After swap of float :"<<x<<" "<<y<<" "<<endl;
+  return 0;
 }
 
 ////////////////////////////////////////////////////////////////////////
 //
 //Test cases successfully handled by application
 //
-//  Input : 10 20
-// Output: Addition of integer is : 30
+// Input : 20  10
+// Output: 10  20
 //
-// Input : 10.5 20.3
-// Output: Addition of float is : 30.8
+// Input : 3.5  7.8
+// Output: 7.8  3.5
 //  
 ////////////////////////////////////////////////////////////////////////
